@@ -82,10 +82,6 @@
 - `start`: Start the server using `node`.
 - `dev`: Start the server using `nodemon` for automatic restarts during development.
 
-## License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
 Feel free to customize and extend the `twitter_backend` according to your application's requirements. If you have any questions or issues, please don't hesitate to reach out.
 
 Happy coding!
