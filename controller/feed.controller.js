@@ -10,6 +10,14 @@ const feedController = {
             data: feed,
         });
     },
+    getHot: async (req, res) => {
+        const feed = await feedService.getHotPost();
+        res.json({
+            success: true,
+            message: "feed generated successfully",
+            data: feed,
+        });
+    },
 };
 
 module.exports = feedController;

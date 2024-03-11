@@ -35,10 +35,7 @@ const getUserSpecificFeed = async (userId) => {
 };
 
 const getHotPost = async () => {
-    let tweets = await Tweet.find({ user: follow.following._id })
-        .sort("-_id -likeCount")
-        .limit(20)
-        .populate({ path: "user", select: "username firstName" });
+    let tweets = await Tweet.find().sort("-likeCount _id").limit(20).populate({ path: "user", select: "username firstName" });
     tweets = tweets.map((tweet) => {
         tweet = tweet.toObject();
         tweet.score = tweet.likeCount + tweet.replyCount * 2;
